@@ -10,6 +10,7 @@ public class Main {
     char g='f';
     boolean isA =true;
 
+
     public static void main(String[] args) {
         System.out.println(calc(2,3,4,5));
         System.out.println(isRange1020(5,7));
@@ -17,6 +18,7 @@ public class Main {
         System.out.println(isNegative(-4));
         name("Артём");
         isLeapYear(4);
+
     }
 
     public static float calc (float a,float b,float c,float d ){
