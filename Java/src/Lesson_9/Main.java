@@ -2,7 +2,7 @@ package Lesson_9;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        String[][] arr = {{"1", "6", "2", "3"}, {"2", "3", "5", "3"}, {"5", "3", "4", "4"}, {"5", "df", "4", "4"}};
+        String[][] arr = {{"1", "6", "2", "3"}, {"2", "3", "5", "3"}, {"5", "3", "4", "4"}, {"5", "98", "4", "4"}};
         checkSizeData(arr);
 
     }
