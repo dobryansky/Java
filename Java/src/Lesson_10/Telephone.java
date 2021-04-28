@@ -1,32 +1,39 @@
 package Lesson_10;
 
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class Telephone {
-    private HashMap<String, ArrayList<Integer>> catalog=new HashMap<>();
-    private ArrayList<Integer> contacts=new ArrayList<>();
+    private HashMap<String, Set<Integer>> catalog = new HashMap<>();
+
     public void add(String name, int number) {
+        HashSet<Integer> contacts = new HashSet<>();
         contacts.add(number);
-        catalog.put(name, contacts);
+        if (catalog.containsKey(name)) {
+            catalog.get(name).addAll(contacts);
+        } else {
+            catalog.put(name, contacts);
+        }
+
     }
 
-    public void get(String name) {
 
-        System.out.println(catalog.get(name));
+    public void get(String name) {
+        System.out.println(name+", номера телефонов :");
+        for (Integer integer : catalog.get(name)) {
+            System.out.println(integer);
+        }
     }
 
     public static void main(String[] args) {
         Telephone telephone = new Telephone();
-        telephone.add("Иванов",47848484);
-        telephone.add("Иванdgdов",478448484);
-        telephone.add("Иванgegов",47843284);
-        telephone.add("Ива454нов",345453);
-        telephone.add("Иванов",555555);
-        telephone.get("Иванов");
+        telephone.add("Иванов", 111111);
+        telephone.add("Петров", 222222);
+        telephone.add("Петров", 333333);
+        telephone.add("Петров", 444444);
+        telephone.add("Иванов", 555555);
+        telephone.add("Иванов", 6666666);
+        telephone.get("Петров");
     }
 
 
