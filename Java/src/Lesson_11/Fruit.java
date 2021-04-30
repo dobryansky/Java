@@ -1,7 +1,16 @@
 package Lesson_11;
 
-public abstract class Fruit {
-    int weight;
+public  class Fruit<T > {
+   private int weight;
 
-    public abstract int getWeight() ;
+
+    public Fruit(int weight) {
+        this.weight = weight;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+
 }
