@@ -7,7 +7,7 @@ public class Example_SB_1 {
         new Thread(() -> e1.method2()).start();
     }
 
-    public  void method1() {
+    public synchronized   void method1() {
         System.out.println("M1");
         for (int i = 0; i < 10; i++) {
             System.out.println(i+"k");
@@ -20,7 +20,7 @@ public class Example_SB_1 {
         System.out.println("M2");
     }
 
-    public  void method2() {
+    public synchronized   void method2() {
         System.out.println("M3");
         for (int i = 0; i < 10; i++) {
             System.out.println(i+"m");
